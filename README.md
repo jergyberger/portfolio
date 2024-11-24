@@ -1,2 +1,7 @@
-# portfolio
-Portfolio showcasing my projects
+# Data Scientist
+
+### Education
+
+### Work experience
+
+### Projects
