@@ -1,0 +1,421 @@
+#spillboks {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: auto;
+  height: 70vh;
+  position: relative;
+  overflow: visible;
+  background: #f2f2f5;
+}
+
+#romBilde::selection {
+  color: none;
+  background: none;
+}
+#lysbryter {
+  height: 5vh;
+  width: 4vw;
+  z-index: 3;
+  font-size: 100%;
+  display: flex;
+}
+
+#lydikon{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#lydikon:hover{
+  cursor: pointer;
+}
+
+button:hover,
+area:hover {
+  cursor: pointer;
+}
+
+#romBilde {
+  display: none;
+  align-self: center;
+  box-sizing: border-box;
+  width: auto;
+  height: 100%;
+}
+
+/* vinflaske */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 2em; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  height: 90%;
+  width: auto;
+  background-color: transparent;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 3vh;
+  right: 5vw;
+  color: #f1f1f1;
+  font-size: 3vh;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Caption of Modal Image */
+#snakeCaption {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: red;
+  font-size: 3vh;
+}
+
+#snakeKnapp {
+  background-color: red;
+  z-index: 4;
+  color: black;
+  width: 20vw;
+  position: relative;
+  align-self: center;
+  font-variant: all-petite-caps;
+  font-weight: bold;
+  font-size: 5vh;
+}
+/* Add Animation */
+.modal-content,
+.caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#snakeboard {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+#score,
+#highscore,
+.snaketekst {
+  font-size: 1.5em;
+  color: coral;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#bobleClose {
+  cursor: pointer;
+}
+
+.boblemodal {
+  position: absolute;
+  width: 30%;
+  height: fit-content;
+  background: whitesmoke;
+  box-sizing: border-box;
+  padding-top: 1vh;
+  padding-bottom: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  z-index: 4;
+  top: 50%;
+  left: 30%;
+  overflow: hidden;
+  display: none;
+  border: #6c7c89 0.2vw solid;
+  width: fit-content;
+  max-width: 60%;
+  max-height: 40%;
+  text-align: center;
+  text-indent: inherit;
+  border-radius: 40%;
+  flex-direction: column;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boblemodal .bobleHeader {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+}
+#bobletekst {
+  font-size: 1vw;
+  height: fit-content;
+}
+#bobleClose {
+  font-size: 1vw;
+  margin-right: 2vw;
+  padding: 1vw;
+  top: 0;
+  left: 80;
+}
+
+.vis {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.bobleClose:hover,
+.bobleClose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.easy-get:hover {
+  cursor: pointer;
+}
+.easy-numpad-frame {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  background-color: rgba(2, 0, 1, 0.8);
+  text-decoration: none;
+  z-index: 999999;
+}
+.easy-numpad-container {
+  visibility: visible;
+  position: absolute;
+  width: 25vw;
+  /* height: 40vh; */ /*max-width: 300px; per far rietrare i 10 caratteri piÃ¹ i segni . e - utilizzando il font Helvetica*/
+  background-color: #393d40; /*Aggiunto per migliorare la visibilitÃ  dei tasti*/ /* margin: 10%; */ /* padding: 4vw; */
+  border-radius: 2vh;
+  align-content: center;
+}
+a#easy-numpad-close {
+  position: absolute;
+  background-color: #f44336;
+  color: #fff;
+  line-height: 1;
+}
+.easy-numpad-output-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden; /*Aggiunto per nascondere i digit oltre lo spazio disponibile*/
+  margin-bottom: 1vh;
+  text-align: center;
+}
+.easy-numpad-output {
+  width: 80%;
+  border: 0.1vw solid #666;
+  background-color: #121212;
+  box-sizing: border-box;
+  margin-bottom: 1vh;
+  text-align: center; /*text-align: center;*/
+  height: 5vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: flex-end; /*-webkit-justify-content: center;*/
+  font-size: 100%;
+  border-radius: 3vw;
+  margin-top: 2vh;
+  margin-left: 2.5vw;
+}
+
+p#easy-numpad-output.easy-numpad-output {
+  color: #388e3c;
+  font-size: 4vh;
+  margin-right: 1vw;
+  display: flex;
+  justify-content: center;
+}
+.easy-numpad-number-container > table {
+  width: 80%;
+  height: 30vh;
+  top: 10%;
+  margin-top: 8vh;
+  font-size: 2vh;
+  left: 10%;
+}
+.easy-numpad-number-container > table a {
+  width: 100%;
+  margin-top: 10;
+  top: 10%;
+  bottom: 0;
+  margin-left: 10%;
+  display: block;
+  padding: 1vw;
+  background-color: #424242;
+  color: limegreen;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2vw;
+  border: black solid 0.1vw;
+}
+.easy-numpad-number-container > table a:hover {
+  background-color: #616161;
+  cursor: pointer;
+}
+.trpad{
+  display: flex;
+  justify-content: center;
+}
+
+.tdpad{
+  margin-left: 1vw;
+  min-width: 4vw;
+  margin-bottom: 1vw;
+}
+
+.tdpadStor{
+  min-width: 7vw;
+}
+
+#del,
+#clear,
+#cancel,
+#done {
+  color: black !important;
+}
+
+.easy-numpad-number-container .del {
+  background-color: beige;
+  color: black;
+}
+
+.easy-numpad-number-container .clear {
+  background-color: orange;
+  color: black;
+}
+
+.easy-numpad-number-container .cancel {
+  background-color: red;
+  color: black;
+}
+.easy-numpad-number-container .done {
+  background-color: #388e3c;
+  color: black;
+}
+
+@media only screen and (min-width: 20vw) and (max-width: 20vw) {
+  a#easy-numpad-close {
+    right: 0vh;
+  }
+}
+
+#video {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+#film {
+  height: auto;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+map {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#startKnapp {
+  font-size: 5vh;
+  background-color: #0F0E47;
+  width: 20%;
+  height: 20%;
+  top: 40%;
+  left: 40%;
+  position: absolute;
+  color: #6964fb;
+  border-radius: 55px;
+  border: 5px solid #6964fb;
+}
+#startKnapp:hover{
+  background-color: #6964fb;
+  color: #0F0E47;
+}
+
+#snakeboard{
+  display: none;
+  border: red solid 0.2vw;
+}
