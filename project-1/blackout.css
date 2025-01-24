@@ -334,12 +334,12 @@ p#easy-numpad-output.easy-numpad-output {
 
 .tdpad{
   margin-left: 2vw;
-  min-width: 3vw;
+  width: 3vw;
   margin-bottom: 1vw;
 }
 
 .tdpadStor{
-  min-width: 7vw;
+  min-width: 3vw;
 }
 
 #del,
