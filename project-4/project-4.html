@@ -21,17 +21,43 @@
         <h1>Dry Bulk Premium Prediction - Deep Neural Network</h1>
     </div>
     <div id="project-presentation1">
-        <img src="../images/project-4.svg">
+        <img src="../images/navi.png">
     </div>
     <div id="project-about">
-            <h2 class="heading">Project Overview</h2><br>
+            <h2 class="heading">Abstract</h2><br>
                     <p>
-                        In my master thesis, I am exploring how deep learning models can be applied to predict dry 
-                        bulk freight rates for Handysize vessels. This research also investigates the potential of 
-                        integrating diverse data sources, including economic indicators and geopolitical events, to 
-                        enhance predictions. While I am deeply invested in the project and excited about its potential 
-                        applications, the details remain confidential at this time. This work combines my passion for 
-                        data science with its real-world implications in the maritime industry.
+                        This thesis investigates how neural networks can be used to improve the accuracy
+and transparency of regional freight rate premium predictions in the Handysize
+dry bulk shipping market. While previous studies have applied neural networks to
+forecast movements in the Baltic Handysize Index (BHSI), limited attention has
+been given to predicting the difference between the index and regional spot rates,
+also referred to as the regional premium. Predicting the premium is challenging
+because the same events that influence the index often affect regional spot rates,
+though not always in the same way.
+<br><br>
+Building on earlier work that found FFNNs outperformed both statistical and traditional machine learning models in this context, this thesis extends the approach
+through a case study in collaboration with Navi Merchants. We focus on a single Handysize trade route from Europe to the US Gulf, exploring a broader set
+of explanatory features and specialized neural network architectures for sequential
+data, including LSTM, GRU, and one-dimensional CNNs. Model performance is
+benchmarked against a simple FFNN baseline to evaluate the benefits of sequenceaware architectures. The aim is to improve predictive performance and enhance
+transparency by using Monte Carlo Dropout to estimate model uncertainty and
+Integrated Gradients to identify how input features influence predictions. These
+contributions are intended to support ship brokers in making more informed and
+confident vessel allocation decisions.<br><br>
+Our best-performing model was a one-dimensional CNN trained on a combined
+dataset of macroeconomic indicators, ship location data, and geopolitical risk measures. It achieved a test RMSE of 1,343, representing a substantial improvement
+over the baseline. Monte Carlo Dropout produced 95% prediction intervals with a
+typical range of 2,000 to 4,000 on either side and a coverage rate of 92.5% on the
+test set. Integrated Gradients revealed that AIS-based vessel location data were the
+most influential features, followed by geopolitical risk indicators.<br><br>
+Sequential neural network architectures show promise, although LSTM and GRU
+models tended to overfit, likely due to their complexity. The superior performance of
+CNNs suggests that short-term patterns are more important for premium prediction
+than longer-term dependencies. Integrated Gradients provided valuable insight into
+how each feature influenced predictions, helping to mitigate the black-box nature of
+neural networks. In contrast, the wide uncertainty bands produced by Monte Carlo
+Dropout, combined with a near-zero premium throughout the test period, made it
+difficult to identify any clearly profitable allocation windows for the selected route.
                     </p>
     </div>
     <!-- End #lead -->
